@@ -1,0 +1,22 @@
+{
+  "name": "HTTPS director",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Here is a plugin that can help you redirect website from HTTP to HTTPS",
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action" :  {
+    "default_icon" : "icon.png",
+	"default_popup" : "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "*://*/*"
+  ]
+}
