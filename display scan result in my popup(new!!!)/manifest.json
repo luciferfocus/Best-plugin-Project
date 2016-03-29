@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "vulnerability finder",
+  "version": "1.0",
+  "description": "Find the vulnerabilities of the current website",
+  "background" : {
+    "scripts": ["background.js"]
+},
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png",
+	"default_popup" : "popup.html"
+  },
+  "content_scripts": [ {
+    "js": ["jquery.js","jquery.min.js", "content.js"],
+    "matches": [ "http://*/*", "https://*/*"],
+	"run_at": "document_end"
+  }],
+  "permissions": [
+    "http://*/",
+	"storage",
+	"tabs",
+	"activeTab"
+  ]
+}
