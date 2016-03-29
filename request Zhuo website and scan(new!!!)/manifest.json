@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Final vulnerability detect plugin",
+  "description": "This is our final edition",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "webRequest",
+    "webRequestBlocking",
+   "activeTab",
+   "tabs",
+   "http://*/*", "https://*/*"
+   ]
+}
